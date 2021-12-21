@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DatafetchService} from "../../services/datafetch.service";
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-beer-page',
@@ -8,16 +8,18 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./beer-page.component.css']
 })
 export class BeerPageComponent implements OnInit {
-  beerInfo:any=undefined
+  beerInfo: any = undefined
+
   constructor(private beerClient: DatafetchService, private activatedRoute: ActivatedRoute) {
   }
-  ngOnInit(): void {
-    // const id:number =this.activatedRoute.url.subscribe(
-    //   params => params[1])
 
-    this.beerClient.getBeerInfo(2).subscribe((response) => {
+  ngOnInit(): void {
+    const id = this.activatedRoute.snapshot.paramMap.get('id');
+    if(id)
+    this.beerClient.getBeerInfo(id).subscribe((response) => {
       this.beerInfo = response as any[];
     })
+
   }
 
 }

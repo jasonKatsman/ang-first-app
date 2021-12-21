@@ -1,0 +1,73 @@
+<article>
+  <h1 class="over-title">Overview</h1>
+  <section class="beer-info-basic info-card">
+    <div class="image-container">
+      <img [src]="beer.image_url" alt="'img"/>
+    </div>
+    <div>
+      <div class="title-container">
+        <h1>{{beer.name}} {{beer.abv}}</h1>
+        <h2>{{beer.tagline}}</h2>
+        <h3 *ngIf="beer.first_brewed">First brewed: {{beer.first_brewed}}</h3>
+      </div>
+
+      <div class="info-description">
+        <h3 *ngIf="beer.first_brewed">Description</h3>
+        <p>{{beer.description}}</p>
+        <ul>
+          <li><p>abv: <strong>{{beer.abv}}%</strong></p></li>
+          <li><p>ibu: <strong>{{beer.ibu}}</strong></p></li>
+          <li><p>ph: <strong>{{beer.ph}}</strong></p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <h3 class="over-title">FOR BREWERS</h3>
+
+  <section class="info-card">
+    <h3 style="color:orangered;">VOLUME</h3>
+    <p><strong>{{beer.volume.value}} {{beer.volume.unit}}</strong> - Boil
+      volume: <strong>{{beer.boil_volume.value}} {{beer.boil_volume.unit}}</strong></p>
+  </section>
+
+  <section class="info-card">
+    <h3 style="color:orangered;">INGREDIENTS</h3>
+    <p>Yeast type: <strong>{{beer.ingredients.yeast}}</strong></p>
+    <ul>
+      <li>
+        <h4 style="color:orangered;">HOPS</h4>
+        <ul>
+          <li *ngFor="let hop of beer.ingredients.hops">
+            <h4>{{hop.name}} {{hop.amount.value}} {{hop.amount.unit}}</h4>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h4 style="color:orangered;">MALT</h4>
+        <ul>
+          <li *ngFor="let malt of beer.ingredients.malt">
+            <h4>{{malt.name}} {{malt.amount.value}} {{malt.amount.unit}}</h4>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section class="info-card">
+    <h3 style="color:orangered;">FOOD TIPS</h3>
+    <p>Pairs well with foods such as:</p>
+    <ul>
+      <li *ngFor="let food of beer.food_pairing">
+        <h4>{{food}}</h4>
+      </li>
+    </ul>
+  </section>
+
+  <section class="info-card">
+    <h3 style="color:orangered;">BREWER ADVICE</h3>
+    <p>{{beer.brewers_tips}}</p>
+  </section>
+</article>

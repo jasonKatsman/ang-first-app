@@ -9,6 +9,8 @@ import { BeerItemComponent } from './components/common/beer-item/beer-item.compo
 import { PaginationComponent } from './components/common/pagination/pagination.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ClampDirective } from './directives/clamp.directive';
+import { FooterComponent } from './components/common/footer/footer.component';
+import { BeerInfoComponentComponent } from './components/common/beer-info-component/beer-info-component.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ClampDirective } from './directives/clamp.directive';
     BeerItemComponent,
     PaginationComponent,
     ClampDirective,
+    FooterComponent,
+    BeerInfoComponentComponent,
   ],
   imports: [
     BrowserModule,

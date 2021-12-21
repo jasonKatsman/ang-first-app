@@ -13,7 +13,7 @@ export class DatafetchService {
     return  this.client.get(`${URL}/?page=${skip}&per_page=${limit}`)
   }
 
-  getBeerInfo(id:number) {
+  getBeerInfo(id:string) {
     return  this.client.get(`${URL}/${id}`)
   }
 }
