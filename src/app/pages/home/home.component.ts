@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
       console.log(response)
       this.loading = false;
       this.limit = lim;
+      this.page = 1;
       this.beerData = response as any[];
     })
   }
@@ -25,7 +26,7 @@ export class HomeComponent implements OnInit {
     this.beerClient.getBeersPagination(this.page + 1, this.limit).subscribe((response) => {
       this.loading = false;
       this.page = this.page + 1;
-      this.beerData = [...this.beerData,...response as any[]];
+      this.beerData = [...this.beerData, ...response as any[]];
     })
   }
 
