@@ -1,0 +1,32 @@
+.beer-item-container {
+  cursor:pointer;
+  background: white;
+  padding: 24px 12px;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+  border-radius: 4px;
+  min-height: 440px;
+}
+
+.beer-item-container:hover {
+  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.2);
+}
+
+.beer-image {
+  background: white;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  height: 300px;
+  width: 100%;
+  object-fit: scale-down;
+}
+
+h3,h4 {
+  margin:0;
+}
+
+h3 {
+  margin:4px 0;
+}
+h4 {
+  color:orangered;
+}

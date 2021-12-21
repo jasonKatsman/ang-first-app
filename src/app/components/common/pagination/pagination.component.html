@@ -1,0 +1,6 @@
+<div class="pagination-container">
+  <p>Pagination:</p>
+  <select class="pagination-select" (change)="onChange($event)">
+    <option *ngFor="let option of paginationLimitOptions" value="{{this.option}}">{{this.option}}</option>
+  </select>
+</div>

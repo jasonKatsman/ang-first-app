@@ -1,0 +1,13 @@
+<app-home-header></app-home-header>
+<main>
+  <app-pagination (onPaginationChange)="setPaginationLimit($event)"></app-pagination>
+
+  <div  class="beer-layout">
+    <app-beer-item *ngFor="let beer of beerData"
+                   [name]="this.beer.name"
+                   [image]="this.beer.image_url"
+                   [tagline]="this.beer.tagline"
+                   [description]="this.beer.description"></app-beer-item>
+  </div>
+  <h1 *ngIf="loading">LOADING</h1>
+</main>

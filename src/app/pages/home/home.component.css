@@ -1,0 +1,34 @@
+main{
+  padding:22px 12px 42px 12px;
+}
+
+.beer-layout {
+  margin-top:18px;
+  display: grid;
+  gap:24px 16px;
+}
+
+@media (min-width: 0px) and (max-width: 480px){
+  .beer-layout {
+    grid-template-columns: 1fr;
+
+  }
+}
+@media (min-width: 481px) and (max-width:768px){
+  .beer-layout {
+    grid-template-columns: 1fr 1fr;
+
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px){
+  .beer-layout {
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+}
+@media (min-width: 1025px){
+  .beer-layout {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  }
+}

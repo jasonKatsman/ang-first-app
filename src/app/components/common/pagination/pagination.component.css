@@ -1,0 +1,12 @@
+.pagination-container {
+  font-weight: bold;
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+}
+
+.pagination-select {
+  padding:6px;
+  font-size: 18px;
+  width: 80px;
+}
