@@ -19,23 +19,17 @@ article {
   cursor: pointer;
   background: orangered;
   color: white;
-  font-size: 15px;
+  font-size: 12px;
+  font-weight: bold;
   padding: 10px;
   border: none;
-  box-shadow: 0 0 0 1px black, 3px 3px 5px 1px rgba(0,0,0,0.15 );
-  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.45 ), 3px 3px 5px 1px rgba(0,0,0,0.15 );
+  border-radius: 4px;
   transition: 0.25s;
 }
 
 .button-more button:hover {
-  cursor: pointer;
-  background: orangered;
-  color: white;
-  font-size: 15px;
-  padding: 10px;
-  border: none;
-  box-shadow: 0 0 0 1px black, 6px 6px 6px 1px rgba(0,0,0,0.15 );
-  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.75 ), 6px 6px 6px 1px rgba(0,0,0,0.15 );
 }
 
 @media (min-width: 0px) and (max-width: 480px) {
