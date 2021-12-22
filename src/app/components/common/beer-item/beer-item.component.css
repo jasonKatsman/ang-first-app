@@ -17,6 +17,8 @@
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
   height: 300px;
   width: 100%;
+}
+.beer-image img{
   object-fit: scale-down;
 }
 

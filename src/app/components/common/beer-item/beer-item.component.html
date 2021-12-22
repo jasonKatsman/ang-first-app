@@ -1,8 +1,10 @@
 <div class="beer-item-container">
-  <img class="beer-image" [src]="image" alt="img"/>
+  <div class="beer-image">
+    <img width="100%" height="100%" [src]="image" alt="img"/>
+  </div>
   <div>
     <h3 [appClamp]="1">
-      {{name}}
+      {{name}} ({{abv}}%)
     </h3>
     <h4 [appClamp]="1">{{tagline}}</h4>
     <p [appClamp]="3">

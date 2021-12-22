@@ -1,3 +1,8 @@
-<main>
-  <app-beer-info-component *ngFor="let beer of beerInfo" [beer]="beer"> </app-beer-info-component>
+<main appMainContainer>
+  <h1>BEER INFORMATION</h1>
+  <section class="beer-main-container">
+    <app-custom-loading *ngIf="loading"></app-custom-loading>
+    <app-custom-error *ngIf="!loading && error" (message)="'Error fetching data!'"></app-custom-error>
+    <app-beer-info-component *ngFor="let beer of beerInfo" [beer]="beer"></app-beer-info-component>
+  </section>
 </main>

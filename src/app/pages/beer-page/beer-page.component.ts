@@ -9,17 +9,27 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class BeerPageComponent implements OnInit {
   beerInfo: any = undefined
+  loading = false
+  error = false
 
   constructor(private beerClient: DatafetchService, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
-    if(id)
-    this.beerClient.getBeerInfo(id).subscribe((response) => {
-      this.beerInfo = response as any[];
-    })
-
+    this.error = false
+    this.loading = true
+    if (id)
+      this.beerClient.getBeerInfo(id).subscribe({
+        next: (response) => {
+          this.beerInfo = response as any[];
+          this.loading = false
+        },
+        error: () => {
+          this.error = true
+          this.loading = false
+        }
+      })
   }
 
 }

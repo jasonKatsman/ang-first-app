@@ -1,5 +1,5 @@
 <app-home-header></app-home-header>
-<main>
+<main appMainContainer>
   <article>
     <section>
       <app-pagination (onPaginationChange)="setPaginationLimit($event)"></app-pagination>
@@ -7,12 +7,18 @@
     <section class="beer-layout">
       <app-beer-item *ngFor="let beer of beerData" [routerLink]="'beer/'+this.beer.id"
                      [name]="this.beer.name"
+                     [abv]="this.beer.abv"
                      [image]="this.beer.image_url"
                      [tagline]="this.beer.tagline"
                      [description]="this.beer.description"></app-beer-item>
     </section>
+    <section style="margin-top:12px;">
+      <app-custom-error *ngIf="!loading && error" (message)="'Error fetching data!'"></app-custom-error>
+    </section>
     <section class="button-more">
-      <button (click)="onViewMore()">VIEW MORE</button>
+      <app-custom-loading *ngIf="loading"></app-custom-loading>
+      <button *ngIf="beerData.length && !loading" [disabled]="loading"
+              (click)="onViewMore()">{{'VIEW MORE'}}</button>
     </section>
   </article>
 </main>

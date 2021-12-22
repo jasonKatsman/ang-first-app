@@ -1,0 +1,14 @@
+.bottle-loading {
+  width: 50px;
+  object-fit: contain;
+  animation: 4s loading-spin infinite ease-in-out;
+}
+
+@keyframes loading-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

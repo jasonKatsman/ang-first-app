@@ -16,8 +16,8 @@ h1,h2,h3,h4,h5{
   margin:0
 }
 
-main {
-  padding:20px;
+.page-layout {
+  padding:10px;
   max-width: 2000px;
   margin: auto;
   min-height: calc(100% - var(--footerHeight));

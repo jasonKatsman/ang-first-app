@@ -11,6 +11,9 @@ import {HttpClientModule} from "@angular/common/http";
 import { ClampDirective } from './directives/clamp.directive';
 import { FooterComponent } from './components/common/footer/footer.component';
 import { BeerInfoComponentComponent } from './components/common/beer-info-component/beer-info-component.component';
+import { CustomLoadingComponent } from './components/common/custom-loading/custom-loading.component';
+import { CustomErrorComponent } from './components/common/custom-error/custom-error.component';
+import { MainContainerDirective } from './directives/main-container.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { BeerInfoComponentComponent } from './components/common/beer-info-compon
     ClampDirective,
     FooterComponent,
     BeerInfoComponentComponent,
+    CustomLoadingComponent,
+    CustomErrorComponent,
+    MainContainerDirective,
   ],
   imports: [
     BrowserModule,

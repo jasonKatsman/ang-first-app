@@ -2,12 +2,6 @@ article {
   padding: 22px 12px 42px 12px;
 }
 
-.beer-layout {
-  margin-top: 18px;
-  display: grid;
-  gap: 24px 16px;
-}
-
 .button-more {
   margin-top: 16px;
   display: flex;
@@ -23,39 +17,36 @@ article {
   font-weight: bold;
   padding: 10px;
   border: none;
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.45 ), 3px 3px 5px 1px rgba(0,0,0,0.15 );
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.45), 3px 3px 5px 1px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   transition: 0.25s;
 }
 
 .button-more button:hover {
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.75 ), 6px 6px 6px 1px rgba(0,0,0,0.15 );
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.75), 6px 6px 6px 1px rgba(0, 0, 0, 0.15);
 }
 
-@media (min-width: 0px) and (max-width: 480px) {
-  .beer-layout {
-    grid-template-columns: 1fr;
-
-  }
+.beer-layout {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px 16px;
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 600px) {
   .beer-layout {
     grid-template-columns: 1fr 1fr;
-
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 850px) {
   .beer-layout {
     grid-template-columns: 1fr 1fr 1fr;
-
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1124px) {
   .beer-layout {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-
   }
 }

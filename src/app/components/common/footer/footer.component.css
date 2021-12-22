@@ -1,12 +1,14 @@
 .footer-container {
   border-top: 1px solid lightgray;
-  height: var(--footerHeight);
+  min-height: var(--footerHeight);
   background: #222222;
   box-shadow: 0 0px 50px 22px rgba(0, 0, 0, 0.21) inset;
   color:whitesmoke;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap:36px 8px;
   align-items: center;
   text-align: center;
   padding: 12px;
