@@ -1,0 +1,10 @@
+.error-message {
+  color: orangered;
+  text-align: center;
+}
+
+.error-message img {
+  width: 250px;
+  object-fit: contain;
+  filter: hue-rotate(-60deg) brightness(61%) contrast(300%) saturate(130%);
+}
